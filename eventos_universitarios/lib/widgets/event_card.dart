@@ -3,9 +3,32 @@ import 'package:flutter/material.dart';
 class EventCard extends StatelessWidget {
   final Map<String, dynamic> evento;
   final VoidCallback onPressed;
+  final bool registrado;
 
   // Constructor de EventCard
-  const EventCard({super.key, required this.evento, required this.onPressed});
+  const EventCard({
+    super.key,
+    required this.evento,
+    required this.onPressed,
+    required this.registrado,
+  });
+
+  // Devuelve un icono diferente dependiendo de la categoría
+  IconData obtenerIconoCategoria(String categoria) {
+    if (categoria == 'Académicos') {
+      return Icons.school_outlined;
+    } else if (categoria == 'Deportivos') {
+      return Icons.sports_soccer;
+    } else if (categoria == 'Culturales') {
+      return Icons.palette_outlined;
+    } else if (categoria == 'Tecnología') {
+      return Icons.computer;
+    } else if (categoria == 'Talleres') {
+      return Icons.handyman_outlined;
+    } else {
+      return Icons.event_outlined;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +68,26 @@ class EventCard extends StatelessWidget {
             ),
           ),
           Padding(
-            // 12 izq, 12 der, 0 arriba, 0 abajo
             padding: const EdgeInsets.symmetric(horizontal: 12),
-            child: Text(evento['categoria']),
+            child: Row(
+              children: [
+                Icon(
+                  obtenerIconoCategoria(evento['categoria']),
+                  size: 18,
+                  color: const Color(0xFFA31F34),
+                ),
+                const SizedBox(width: 6),
+                Text(
+                  evento['categoria'].toString().toUpperCase(),
+                  style: const TextStyle(
+                    color: Color(0xFFA31F34),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                    letterSpacing: 1,
+                  ),
+                ),
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(12, 6, 12, 12),
@@ -66,11 +106,32 @@ class EventCard extends StatelessWidget {
             child: Text('Cupo: ${evento['cupo']}'),
           ),
 
+          if (registrado)
+            const Padding(
+              padding: EdgeInsets.fromLTRB(12, 10, 12, 0),
+              child: Text(
+                'Registrado',
+                style: TextStyle(
+                  color: Color(0xFF2E7D32),
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1,
+                ),
+              ),
+            ),
+
           Padding(
             padding: const EdgeInsets.all(12),
-            child: ElevatedButton(
-              onPressed: onPressed,
-              child: const Text('Registrarme'),
+            child: SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: onPressed,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFFA31F34),
+                  foregroundColor: Colors.white,
+                ),
+                child: Text(registrado ? 'Cancelar registro' : 'Registrarme'),
+              ),
             ),
           ),
           const SizedBox(height: 8),

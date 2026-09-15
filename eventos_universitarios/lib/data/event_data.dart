@@ -1,8 +1,6 @@
 // Datos iniciales para la práctica.
-//
-// Pueden agregar más eventos o modificar estos datos.
-// No es obligatorio conservar exactamente estos eventos.
 
+// Lista de textos
 const List<String> categorias = [
   'Todos',
   'Académicos',
@@ -12,6 +10,7 @@ const List<String> categorias = [
   'Talleres',
 ];
 
+// Lista de Maps (dynamic porque los valores pueden tener diferentes tipos)
 const List<Map<String, dynamic>> eventos = [
   {
     'titulo': 'Hackathon Universitario',
@@ -20,8 +19,7 @@ const List<Map<String, dynamic>> eventos = [
     'hora': '09:00',
     'lugar': 'Laboratorio de Cómputo',
     'cupo': 40,
-    'imagen':
-        'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900',
+    'imagen': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi7dmP14BJXuTAHVIMKYsB4nJTPfHSMIi69CTKkruxqg&s=10',
   },
   {
     'titulo': 'Taller de Flutter',
@@ -30,8 +28,7 @@ const List<Map<String, dynamic>> eventos = [
     'hora': '12:00',
     'lugar': 'Edificio 5',
     'cupo': 25,
-    'imagen':
-        'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900',
+    'imagen': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQOgBtiJcMRHnw77qqwuFi6ZBQsbEYTby4M2TxqExAv8mBFdpwAoaI37Yl&s=10',
   },
   {
     'titulo': 'Conferencia de Inteligencia Artificial',
@@ -40,8 +37,7 @@ const List<Map<String, dynamic>> eventos = [
     'hora': '10:00',
     'lugar': 'Auditorio Central',
     'cupo': 120,
-    'imagen':
-        'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=900',
+    'imagen': 'https://images.unsplash.com/photo-1582192730841-2a682d7375f9?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWklMjBjb25mZXJlbmNlfGVufDB8fDB8fHww',
   },
   {
     'titulo': 'Torneo de Futbol',
@@ -50,8 +46,7 @@ const List<Map<String, dynamic>> eventos = [
     'hora': '16:00',
     'lugar': 'Cancha Universitaria',
     'cupo': 80,
-    'imagen':
-        'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=900',
+    'imagen': 'https://images.unsplash.com/photo-1626248801379-51a0748a5f96?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGZvb3RiYWxsfGVufDB8fDB8fHww',
   },
   {
     'titulo': 'Exposición de Arte',
@@ -60,8 +55,7 @@ const List<Map<String, dynamic>> eventos = [
     'hora': '11:00',
     'lugar': 'Galería Universitaria',
     'cupo': 60,
-    'imagen':
-        'https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=900',
+    'imagen': 'https://plus.unsplash.com/premium_photo-1676668708126-39b12a0e9d96?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXJ0fGVufDB8fDB8fHww',
   },
   {
     'titulo': 'Charla de Ciberseguridad',
@@ -70,8 +64,7 @@ const List<Map<String, dynamic>> eventos = [
     'hora': '13:00',
     'lugar': 'Sala Audiovisual',
     'cupo': 50,
-    'imagen':
-        'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=900',
+    'imagen': 'https://plus.unsplash.com/premium_photo-1674669009418-2643aa58b11b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGN5YmVyc2VjdXJpdHl8ZW58MHx8MHx8fDA%3D',
   },
   {
     'titulo': 'Taller de Emprendimiento',
@@ -80,8 +73,7 @@ const List<Map<String, dynamic>> eventos = [
     'hora': '15:00',
     'lugar': 'Centro de Innovación',
     'cupo': 35,
-    'imagen':
-        'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=900',
+    'imagen': 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJ1c2luZXNzfGVufDB8fDB8fHww',
   },
   {
     'titulo': 'Festival Universitario',
@@ -90,7 +82,96 @@ const List<Map<String, dynamic>> eventos = [
     'hora': '17:00',
     'lugar': 'Plaza Principal',
     'cupo': 200,
-    'imagen':
-        'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=900',
+    'imagen': 'https://images.unsplash.com/photo-1506157786151-b8491531f063?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZmVzdGl2YWx8ZW58MHx8MHx8fDA%3D',
+  },
+  {
+    'titulo': 'Torneo de Basquetbol',
+    'categoria': 'Deportivos',
+    'fecha': '6 de octubre',
+    'hora': '17:00',
+    'lugar': 'Canchas de Basquetbol',
+    'cupo': 50,
+    'imagen': 'https://images.unsplash.com/flagged/photo-1577416336755-0b86c3e4f1d8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGJhc3F1ZXRib2x8ZW58MHx8MHx8fDA%3D',
+  },
+  {
+    'titulo': 'Taller de Cerámica',
+    'categoria': 'Talleres',
+    'fecha': '5 de diciembre',
+    'hora': '10:00',
+    'lugar': 'Salón 55',
+    'cupo': 20,
+    'imagen': 'https://images.unsplash.com/photo-1508269151431-a34449ca161d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGNlcmFtaWNhfGVufDB8fDB8fHww',
+  },
+  {
+    'titulo': 'The Greatest Showman Obra Teatral',
+    'categoria': 'Culturales',
+    'fecha': '21 de mayo',
+    'hora': '18:00',
+    'lugar': 'Auditorio Central',
+    'cupo': 100,
+    'imagen': 'https://images.unsplash.com/photo-1576724196706-3f23f51ea351?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dGhlYXRyZXxlbnwwfHwwfHx8MA%3D%3D',
+  },
+  {
+    'titulo': 'Conferencia de AWS',
+    'categoria': 'Académicos',
+    'fecha': '15 de septiembre',
+    'hora': '12:00',
+    'lugar': 'Auditorio Central',
+    'cupo': 100,
+    'imagen': 'https://images.unsplash.com/photo-1561489396-888724a1543d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbmZlcmVuY2V8ZW58MHx8MHx8fDA%3D',
+  },
+  {
+    'titulo': 'Torneo de eSports',
+    'categoria': 'Deportivos',
+    'fecha': '10 de enero',
+    'hora': '15:00',
+    'lugar': 'Arena Gallos',
+    'cupo': 60,
+    'imagen': 'https://upload.wikimedia.org/wikipedia/commons/9/96/LGD_Gaming_at_the_2015_LPL_Summer_Finals.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original',
+  },
+  {
+    'titulo': 'Expo de Robótica',
+    'categoria': 'Tecnología',
+    'fecha': '5 de febrero',
+    'hora': '11:00',
+    'lugar': 'Sala de Usos Múltiples',
+    'cupo': 'Ilimitado',
+    'imagen': 'https://images.unsplash.com/photo-1782527248342-8a5ca21af10c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fHJvYm90cyUyMGV4cG98ZW58MHx8MHx8fDA%3D',
+  },
+  {
+    'titulo': 'Taller de Configuración de Redes y Routers',
+    'categoria': 'Talleres',
+    'fecha': '20 de diciembre',
+    'hora': '09:00',
+    'lugar': 'Laboratorio 55-A',
+    'cupo': 20,
+    'imagen': 'https://images.unsplash.com/photo-1691435828932-911a7801adfb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGN5YmVyc2VjdXJpdHl8ZW58MHx8MHx8fDA%3D',
+  },
+  {
+    'titulo': 'Noche de Cine al Aire Libre',
+    'categoria': 'Culturales',
+    'fecha': '18 de mayo',
+    'hora': '18:00',
+    'lugar': 'Jardín de las Generaciones',
+    'cupo': 'Ilimitado',
+    'imagen': 'https://www.belgradewaterfront.com/static/uploads/2025/06/bw-open-air-cinema_-scaled.webp',
+  },
+  {
+    'titulo': 'Carrera de 5 km',
+    'categoria': 'Deportivos',
+    'fecha': '23 de abril',
+    'hora': '07:00',
+    'lugar': 'Pista Universitaria',
+    'cupo': 10,
+    'imagen': 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHJ1bnxlbnwwfHwwfHx8MA%3D%3D',
+  },
+  {
+    'titulo': 'Conferencia de Computación Cuántica',
+    'categoria': 'Académicos',
+    'fecha': '5 de junio',
+    'hora': '08:00',
+    'lugar': 'Auditorio Central',
+    'cupo': 100,
+    'imagen': 'https://image.nextplatform.com/215545.webp?imageId=215545&width=960&height=402&format=jpg',
   },
 ];
