@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
               const Text(
                 'EVENTOS DEL\nCAMPUS',
                 style: TextStyle(
-                  fontSize: 36,
+                  fontSize: 26,
                   fontWeight: FontWeight.w900,
                   height: 1,
                   letterSpacing: -1,
@@ -235,7 +235,7 @@ class _HomePageState extends State<HomePage> {
                         mainAxisSpacing: 12,
                         // Controla la proporción entre ancho y alto de las
                         // tarjetas (entre menos el número más alta)
-                        childAspectRatio: 0.60,
+                        childAspectRatio: 0.82,
                       ),
                       itemBuilder: (context, index) {
                         final evento = eventosMostrados[index];
