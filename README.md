@@ -49,6 +49,7 @@ The project was developed as part of the **Mobile Device Programming** course.
 - Category-specific icons
 
 </td>
+
 <td width="50%">
 
 ### 🎟️ Registration Features
@@ -72,27 +73,27 @@ The project was developed as part of the **Mobile Device Programming** course.
 
 ### Welcome & Home
 
-|               Welcome Screen                |              Event Catalog              |
-| :-----------------------------------------: | :-------------------------------------: |
-| ![Welcome](screenshots/welcome.png)         | ![Home](screenshots/home.png)           |
+| Welcome Screen | Event Catalog |
+| :---: | :---: |
+| <img src="screenshots/welcome.png" width="280"> | <img src="screenshots/home.png" width="280"> |
 
 ### Event Discovery
 
-|                  Search                   |                Categories                 |
-| :---------------------------------------: | :---------------------------------------: |
-| ![Search](screenshots/search.png)         | ![Filters](screenshots/filters.png)       |
+| Search | Categories |
+| :---: | :---: |
+| <img src="screenshots/search.png" width="280"> | <img src="screenshots/filters.png" width="280"> |
 
 ### Registration
 
-|               Registered Event                |              Empty State               |
-| :-------------------------------------------: | :------------------------------------: |
-| ![Registered](screenshots/registered.png)     | ![Empty](screenshots/empty-state.png)  |
+| Registered Event | Empty State |
+| :---: | :---: |
+| <img src="screenshots/registered.png" width="280"> | <img src="screenshots/empty-state.png" width="280"> |
 
 ### Responsive Design
 
-|                  Mobile                  |                   Desktop                    |
-| :--------------------------------------: | :------------------------------------------: |
-| ![Mobile](screenshots/mobile.png)        | ![Tablet](screenshots/tablet.png)          |
+| Mobile | Tablet |
+| :---: | :---: |
+| <img src="screenshots/mobile.png" width="280"> | <img src="screenshots/tablet.png" width="420"> |
 
 </div>
 
@@ -105,8 +106,8 @@ The project was developed as part of the **Mobile Device Programming** course.
 Before you begin, ensure you have the following installed:
 
 | Requirement | Version | Download |
-| ------------ | ------- | -------- |
-| Flutter SDK | Latest stable | [Download](https://flutter.dev/docs/get-started/install) |
+| --- | --- | --- |
+| Flutter SDK | Latest stable | [Download](https://docs.flutter.dev/get-started/install) |
 | Dart SDK | Included with Flutter | [Documentation](https://dart.dev/) |
 | Git | Latest | [Download](https://git-scm.com/) |
 | VS Code | Latest | [Download](https://code.visualstudio.com/) |
@@ -159,10 +160,10 @@ Each event contains information such as:
 {
   'titulo': 'Hackathon Universitario',
   'categoria': 'Tecnología',
-  'fecha': '15 de septiembre',
-  'hora': '10:00 AM',
-  'lugar': 'Auditorio Universitario',
-  'cupo': 50,
+  'fecha': '18 de septiembre',
+  'hora': '09:00',
+  'lugar': 'Laboratorio de Cómputo',
+  'cupo': 40,
   'imagen': 'https://example.com/image.jpg',
 }
 ```
@@ -199,9 +200,9 @@ flutter run -d chrome
 
 **Option 3: VS Code**
 
-1. Open the `eventos_universitarios` folder
-2. Select a Flutter device
-3. Press `F5` or click **Run and Debug**
+1. Open the `eventos_universitarios` folder.
+2. Select a Flutter device.
+3. Press `F5` or click **Run and Debug**.
 
 ### Using Campus Eventos
 
@@ -221,7 +222,7 @@ flutter run -d chrome
 <div align="center">
 
 | Technology | Purpose |
-| :--------: | :-----: |
+| :---: | :---: |
 | ![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white) | Primary Language |
 | ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white) | Application Framework |
 | ![Material Design](https://img.shields.io/badge/Material_Design-757575?style=flat-square&logo=material-design&logoColor=white) | UI Components |
