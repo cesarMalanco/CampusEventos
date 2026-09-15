@@ -1,89 +1,100 @@
+<div align="center">
+
 # 🎓 Campus Eventos
 
-A responsive Flutter application for discovering, filtering, and registering for university events.
+[![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
+[![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
+[![Material Design](https://img.shields.io/badge/Material_Design-757575?style=for-the-badge&logo=material-design&logoColor=white)](https://m3.material.io/)
+[![GitHub](https://img.shields.io/badge/GitHub-Version_Control-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
+**A responsive Flutter application for discovering, filtering, and registering for university events**
+
+</div>
 
 ---
 
 ## 🎯 About The Project
 
-Campus Eventos is a Flutter application designed to help university students discover activities happening around their campus.
+**Campus Eventos** is a responsive Flutter application designed to help university students discover activities and events happening around their campus.
 
-The application provides a clean and responsive interface where users can browse academic, sports, cultural, technology, and workshop events. Events can be searched and filtered dynamically, and users can register or cancel their registration directly from each event card.
+The application provides an intuitive interface where users can browse academic, sports, cultural, technology, and workshop events. It includes dynamic search and filtering, responsive layouts, registration management, and visual feedback through SnackBars.
 
 The project was developed as part of the **Mobile Device Programming** course.
 
 ### Why Campus Eventos?
 
-- 🔎 Search university events dynamically
-- 🏷️ Filter events by category
-- 📱 Responsive design for mobile, tablet, and larger screens
-- 🎟️ Register and cancel event registrations
-- 🔔 Interactive feedback using SnackBars
-- 🎨 Custom university-inspired visual identity
-- 📅 View relevant event information at a glance
+- 🔎 **Dynamic event search** by title
+- 🏷️ **Category filtering** for different types of events
+- 🎟️ **Event registration and cancellation**
+- 📱 **Responsive interface** for mobile, tablet, and desktop
+- 🔔 **Interactive SnackBar notifications**
+- 🎨 **Custom academic-inspired visual identity**
 
 ---
 
 ## ✨ Features
 
+<table>
+<tr>
+<td width="50%">
+
 ### 🔎 Event Discovery
 
-- Browse a catalog of university events
-- Search events by name
+- Browse university events
+- Search events dynamically
 - Filter events by category
-- Dynamic event counter
-- Empty state when no events match the selected filters
+- Display the number of matching events
+- Empty state when no results are found
+- Category-specific icons
 
-### 🏷️ Event Categories
+</td>
+<td width="50%">
 
-Events are organized into:
+### 🎟️ Registration Features
 
-- 🎓 Academic
-- ⚽ Sports
-- 🎨 Cultural
-- 💻 Technology
-- 🛠️ Workshops
+- Register for university events
+- Cancel existing registrations
+- Visual registered status
+- Dynamic registration button
+- Confirmation messages using SnackBars
+- Registration state updates using `setState()`
 
-### 🎟️ Event Registration
-
-Users can register for an event directly from its card.
-
-When an event is registered:
-
-- The event displays a **Registered** status
-- The registration button changes its appearance
-- A confirmation message is displayed using a SnackBar
-- The registration can be cancelled at any time
-
-### 📱 Responsive Interface
-
-The application automatically adjusts the number of event cards displayed depending on the available screen width.
-
-It supports layouts for:
-
-- Mobile devices
-- Tablets
-- Desktop and web screens
+</td>
+</tr>
+</table>
 
 ---
 
 ## 📸 Demo
 
-### Welcome Screen
+<div align="center">
 
-> Add a screenshot of the welcome screen here.
+### Welcome & Home
 
-### Event Catalog
+|               Welcome Screen                |              Event Catalog              |
+| :-----------------------------------------: | :-------------------------------------: |
+| ![Welcome](screenshots/welcome.png)         | ![Home](screenshots/home.png)           |
 
-> Add a screenshot showing the event cards and categories here.
+### Event Discovery
 
-### Search & Filters
+|                  Search                   |                Categories                 |
+| :---------------------------------------: | :---------------------------------------: |
+| ![Search](screenshots/search.png)         | ![Filters](screenshots/filters.png)       |
 
-> Add a screenshot showing an active search or category filter here.
+### Registration
 
-### Event Registration
+|               Registered Event                |              Empty State               |
+| :-------------------------------------------: | :------------------------------------: |
+| ![Registered](screenshots/registered.png)     | ![Empty](screenshots/empty-state.png)  |
 
-> Add a screenshot showing a registered event here.
+### Responsive Design
+
+|                  Mobile                  |                   Desktop                    |
+| :--------------------------------------: | :------------------------------------------: |
+| ![Mobile](screenshots/mobile.png)        | ![Desktop](screenshots/desktop.png)          |
+
+</div>
 
 ---
 
@@ -91,39 +102,40 @@ It supports layouts for:
 
 ### Prerequisites
 
-Before running the project, make sure you have the following installed:
+Before you begin, ensure you have the following installed:
 
-| Requirement | Purpose |
-| --- | --- |
-| Flutter SDK | Application framework |
-| Dart SDK | Programming language |
-| Git | Version control |
-| Android Studio / Xcode | Mobile emulation |
-| VS Code | Recommended editor |
+| Requirement | Version | Download |
+| ------------ | ------- | -------- |
+| Flutter SDK | Latest stable | [Download](https://flutter.dev/docs/get-started/install) |
+| Dart SDK | Included with Flutter | [Documentation](https://dart.dev/) |
+| Git | Latest | [Download](https://git-scm.com/) |
+| VS Code | Latest | [Download](https://code.visualstudio.com/) |
+
+> 💡 **Tip:** Run `flutter doctor` before starting the project to verify that your Flutter environment is configured correctly.
 
 ### Quick Start
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/cesarMalanco/CampusEventos.git
 
 # Navigate to the Flutter project
 cd CampusEventos/eventos_universitarios
 
-# Install dependencies
+# Install project dependencies
 flutter pub get
 
 # Run the application
 flutter run
 ```
 
-To check available devices:
+To view the available devices:
 
 ```bash
 flutter devices
 ```
 
-To run the application on Chrome:
+To run the application in Chrome:
 
 ```bash
 flutter run -d chrome
@@ -131,70 +143,170 @@ flutter run -d chrome
 
 ---
 
+## 📅 Event Data
+
+### Event Storage
+
+The application stores the event information separately from the user interface in:
+
+```text
+lib/data/event_data.dart
+```
+
+Each event contains information such as:
+
+```dart
+{
+  'titulo': 'Hackathon Universitario',
+  'categoria': 'Tecnología',
+  'fecha': '15 de septiembre',
+  'hora': '10:00 AM',
+  'lugar': 'Auditorio Universitario',
+  'cupo': 50,
+  'imagen': 'https://example.com/image.jpg',
+}
+```
+
+### Available Categories
+
+The application includes the following event categories:
+
+- Académicos
+- Deportivos
+- Culturales
+- Tecnología
+- Talleres
+
+The **Todos** option displays all available events.
+
+---
+
 ## 💻 Usage
 
-After starting the application:
+### Running the Application
 
-1. Open the welcome screen.
-2. Select **Explore Events**.
+**Option 1: Command Line**
+
+```bash
+flutter run
+```
+
+**Option 2: Chrome**
+
+```bash
+flutter run -d chrome
+```
+
+**Option 3: VS Code**
+
+1. Open the `eventos_universitarios` folder
+2. Select a Flutter device
+3. Press `F5` or click **Run and Debug**
+
+### Using Campus Eventos
+
+1. Open the application.
+2. Press **Explore Events** on the welcome screen.
 3. Browse the available university events.
-4. Use the search bar to find an event by name.
-5. Select a category to filter the results.
+4. Use the search bar to find events by title.
+5. Select a category to filter the event catalog.
 6. Press **Register** to register for an event.
-7. Press **Cancel Registration** to remove the registration.
+7. The event will display a **Registered** status.
+8. Press **Cancel Registration** to remove the registration.
 
 ---
 
 ## 🛠️ Tech Stack
 
+<div align="center">
+
 | Technology | Purpose |
-| --- | --- |
-| Dart | Programming language |
-| Flutter | Application framework |
-| Material Design | User interface components |
-| Git | Version control |
-| GitHub | Source code repository |
+| :--------: | :-----: |
+| ![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white) | Primary Language |
+| ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white) | Application Framework |
+| ![Material Design](https://img.shields.io/badge/Material_Design-757575?style=flat-square&logo=material-design&logoColor=white) | UI Components |
+| ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) | Version Control |
+| ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) | Repository Hosting |
+
+</div>
+
+### Flutter Concepts
+
+```text
+StatefulWidget
+StatelessWidget
+setState()
+ListView.builder
+GridView.builder
+LayoutBuilder
+ChoiceChip
+Card
+Image.network
+TextField
+SnackBar
+Navigator
+Row
+Column
+```
 
 ---
 
 ## 📁 Project Structure
 
 ```text
-eventos_universitarios/
+CampusEventos/
 │
-├── lib/
-│   ├── main.dart
+├── 📱 eventos_universitarios/
 │   │
-│   ├── data/
-│   │   └── event_data.dart
+│   ├── lib/
+│   │   │
+│   │   ├── main.dart                     # Application entry point
+│   │   │
+│   │   ├── 📂 data/
+│   │   │   └── event_data.dart           # Event information & categories
+│   │   │
+│   │   ├── 📱 screens/
+│   │   │   ├── welcome_page.dart         # Welcome screen
+│   │   │   └── home_page.dart            # Main event catalog
+│   │   │
+│   │   ├── 🧩 widgets/
+│   │   │   ├── campus_logo.dart          # Custom Campus Eventos logo
+│   │   │   ├── category_chip.dart        # Category filter widget
+│   │   │   └── event_card.dart           # Event information card
+│   │   │
+│   │   └── 🎨 theme/
+│   │       └── app_theme.dart             # Application visual theme
 │   │
-│   ├── screens/
-│   │   ├── home_page.dart
-│   │   └── welcome_page.dart
-│   │
-│   ├── widgets/
-│   │   ├── campus_logo.dart
-│   │   ├── category_chip.dart
-│   │   └── event_card.dart
-│   │
-│   └── theme/
-│       └── app_theme.dart
+│   ├── android/                           # Android configuration
+│   ├── ios/                               # iOS configuration
+│   ├── macos/                             # macOS configuration
+│   ├── web/                               # Web configuration
+│   ├── test/                              # Flutter tests
+│   └── pubspec.yaml                       # Flutter dependencies
 │
-├── android/
-├── ios/
-├── macos/
-├── web/
-├── test/
-├── pubspec.yaml
+├── 📂 screenshots/                        # Demo screenshots
+├── LICENSE
 └── README.md
 ```
 
 ---
 
-## 👤 Author
+## 📝 License
 
-**César Malanco**
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-_Built with ❤️ using Flutter and Dart._
+## 👤 Author
+
+<div align="center">
+
+**César Malanco**
+
+[![GitHub](https://img.shields.io/badge/GitHub-cesarMalanco-181717?style=for-the-badge&logo=github)](https://github.com/cesarMalanco)
+
+---
+
+<sub>Built with ❤️ using Flutter and Dart</sub>
+
+</div>
