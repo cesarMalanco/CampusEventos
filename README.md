@@ -92,7 +92,7 @@ The project was developed as part of the **Mobile Device Programming** course.
 
 |                  Mobile                  |                   Desktop                    |
 | :--------------------------------------: | :------------------------------------------: |
-| ![Mobile](screenshots/mobile.png)        | ![Desktop](screenshots/desktop.png)          |
+| ![Mobile](screenshots/mobile.png)        | ![Tablet](screenshots/desktop.png)          |
 
 </div>
 
