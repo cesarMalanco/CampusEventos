@@ -4,7 +4,7 @@
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
-[![Material Design](https://img.shields.io/badge/Material_Design-757575?style=for-the-badge&logo=material-design&logoColor=white)](https://m3.material.io/)
+[![Material Design](https://img.shields.io/badge/Material_Design-757575?style=for-the-badge&logoColor=white)](https://m3.material.io/)
 [![GitHub](https://img.shields.io/badge/GitHub-Version_Control-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
@@ -73,27 +73,71 @@ The project was developed as part of the **Mobile Device Programming** course.
 
 ### Welcome & Home
 
-| Welcome Screen | Event Catalog |
-| :---: | :---: |
-| <img src="screenshots/welcome.png" width="280"> | <img src="screenshots/home.png" width="280"> |
+<table>
+<tr>
+<td align="center"><strong>Welcome Screen</strong></td>
+<td align="center"><strong>Event Catalog</strong></td>
+</tr>
+<tr>
+<td align="center">
+<img src="screenshots/welcome.png" width="380">
+</td>
+<td align="center">
+<img src="screenshots/home.png" width="380">
+</td>
+</tr>
+</table>
 
 ### Event Discovery
 
-| Search | Categories |
-| :---: | :---: |
-| <img src="screenshots/search.png" width="280"> | <img src="screenshots/filters.png" width="280"> |
+<table>
+<tr>
+<td align="center"><strong>Search</strong></td>
+<td align="center"><strong>Categories</strong></td>
+</tr>
+<tr>
+<td align="center">
+<img src="screenshots/search.png" width="380">
+</td>
+<td align="center">
+<img src="screenshots/filters.png" width="380">
+</td>
+</tr>
+</table>
 
 ### Registration
 
-| Registered Event | Empty State |
-| :---: | :---: |
-| <img src="screenshots/registered.png" width="280"> | <img src="screenshots/empty-state.png" width="280"> |
+<table>
+<tr>
+<td align="center"><strong>Registered Event</strong></td>
+<td align="center"><strong>Empty State</strong></td>
+</tr>
+<tr>
+<td align="center">
+<img src="screenshots/registered.png" width="380">
+</td>
+<td align="center">
+<img src="screenshots/empty-state.png" width="380">
+</td>
+</tr>
+</table>
 
 ### Responsive Design
 
-| Mobile | Tablet |
-| :---: | :---: |
-| <img src="screenshots/mobile.png" width="280"> | <img src="screenshots/tablet.png" width="420"> |
+<table>
+<tr>
+<td align="center"><strong>Mobile</strong></td>
+<td align="center"><strong>Tablet</strong></td>
+</tr>
+<tr>
+<td align="center">
+<img src="screenshots/mobile.png" width="300">
+</td>
+<td align="center">
+<img src="screenshots/tablet.png" width="500">
+</td>
+</tr>
+</table>
 
 </div>
 
@@ -106,7 +150,7 @@ The project was developed as part of the **Mobile Device Programming** course.
 Before you begin, ensure you have the following installed:
 
 | Requirement | Version | Download |
-| --- | --- | --- |
+| ------------ | ------- | -------- |
 | Flutter SDK | Latest stable | [Download](https://docs.flutter.dev/get-started/install) |
 | Dart SDK | Included with Flutter | [Documentation](https://dart.dev/) |
 | Git | Latest | [Download](https://git-scm.com/) |
@@ -207,13 +251,13 @@ flutter run -d chrome
 ### Using Campus Eventos
 
 1. Open the application.
-2. Press **Explore Events** on the welcome screen.
+2. Press **Explorar eventos** on the welcome screen.
 3. Browse the available university events.
 4. Use the search bar to find events by title.
 5. Select a category to filter the event catalog.
-6. Press **Register** to register for an event.
-7. The event will display a **Registered** status.
-8. Press **Cancel Registration** to remove the registration.
+6. Press **Registrarme** to register for an event.
+7. The event will display a **Registrado** status.
+8. Press **Cancelar registro** to remove the registration.
 
 ---
 
@@ -225,7 +269,7 @@ flutter run -d chrome
 | :---: | :---: |
 | ![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white) | Primary Language |
 | ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white) | Application Framework |
-| ![Material Design](https://img.shields.io/badge/Material_Design-757575?style=flat-square&logo=material-design&logoColor=white) | UI Components |
+| ![Material Design](https://img.shields.io/badge/Material_Design-757575?style=flat-square) | UI Components |
 | ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) | Version Control |
 | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) | Repository Hosting |
 
